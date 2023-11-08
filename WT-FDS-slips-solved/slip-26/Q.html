@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form method="post" action="Q1.php">
+            Enter Hospitial name:<br>
+            <input type="text" name="hospitalName"><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
+
+<!--
+ scehmea
+doctor Table (3NF):
+	doc_no (Primary Key)
+	dname
+	address
+	city
+	area
+	hosp_no (Foreign Key referencing hospital table)
+
+hospital Table (3NF):
+	hosp_no (Primary Key)
+	hname
+	hcity
+
+-->

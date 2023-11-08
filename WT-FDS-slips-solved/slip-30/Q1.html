@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Competition Rank Search</title>
+</head>
+<body>
+    <h1>Search for 1st Rank Student in a Competition</h1>
+    <form method="post" action="Q1.php">
+        Enter Competition Name:
+        <input type="text" name="cname">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
+
+<!--
+-- Create the Student table
+CREATE TABLE Student (
+    Stud_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    class VARCHAR(255)
+);
+
+-- Create the Competition table
+CREATE TABLE Competition (
+    c_no SERIAL PRIMARY KEY,
+    c_name VARCHAR(255),
+    type VARCHAR(255)
+);
+
+-- Create the Rank table
+CREATE TABLE Rank (
+    stud_id INT REFERENCES Student(Stud_id),
+    c_no INT REFERENCES Competition(c_no),
+    rank INT,
+    year INT,
+    PRIMARY KEY (stud_id, c_no, year)
+);
+-->

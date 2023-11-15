@@ -12,7 +12,7 @@ $comp_Name = $_POST['cname'];
 $query = "SELECT s.name, s.class, r.year
           FROM Student s
           JOIN Rank r ON s.Stud_id = r.stud_id
-          pJOIN Competition c ON r.c_no = c.c_no
+          JOIN Competition c ON r.c_no = c.c_no
           WHERE c.c_name = '$comp_Name' AND r.rank = 1";
 
 $result = pg_query($conn, $query);
